@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/norman/friendly_id
+  revision: a3657cc1eff23f7cb0c02b511617436eecaea397
+  specs:
+    friendly_id (5.2.5)
+      activerecord (>= 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -155,6 +162,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
+  friendly_id!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)

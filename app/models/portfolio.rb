@@ -9,6 +9,12 @@ class Portfolio < ApplicationRecord
 
   has_many :technologies
 
+  # Do not accept if name is blank
+  accepts_nested_attributes_for :technologies, 
+                                reject_if: lambda { |attrs| attrs['name'].blank? }
+
+  # When ruby_on_rails_portfolio_items is called, it will grab all the portfolio items
+  # where the subtitle is "Ruby on Rails"
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: "Ruby on Rails") }
   
   def self.angular

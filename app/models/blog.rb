@@ -5,4 +5,7 @@ class Blog < ApplicationRecord
 
   # Will not allow a blog post to be created unless a title and body is present
   validates_presence_of :title, :body
+
+  # Blog belongs to topic
+  belongs_to :topic
 end

@@ -12,3 +12,9 @@ module DeviseWhitelist
   end
 
 end
+
+=begin
+  **Note**
+  Naming convention for creating the ruby file:
+  module IAmARubyFile -> should be named as -> i_am_a_ruby_file.rb
+=end

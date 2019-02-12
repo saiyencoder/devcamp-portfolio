@@ -29,5 +29,9 @@ module DevcampPortfolio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Instead of using permit for strong parameters in controllers,
+    # the follwing code will override the requirement: (Default is false)
+    # config.action_controller.permit_all_parameters =  true
   end
 end

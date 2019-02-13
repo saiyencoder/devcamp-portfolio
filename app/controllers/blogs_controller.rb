@@ -1,5 +1,8 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  # This tells the controller which layout out to choose
+  # layout is the method and "blog" is the argument
+  layout "blog"
 
   # GET /blogs
   # GET /blogs.json

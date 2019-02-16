@@ -7,3 +7,10 @@
 <!-- The following will look in the helper folder and 
   see if there is a sample_helper method -->
 <%# sample_helper %>
+
+<!-- The following is a content helper NOTE: begin with skull tag = -->
+<%# content_tag :p, class: "my-special-class" do %>
+  <!-- I am a paragraph made from Ruby's content_tag method -->
+<%# end %>
+<!-- This is best used in the helper file as a method -->
+<%# sample_helper %>

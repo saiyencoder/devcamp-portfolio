@@ -7,5 +7,7 @@ class Blog < ApplicationRecord
   validates_presence_of :title, :body
 
   # Blog belongs to topic
-  belongs_to :topic
+  # Added optional: true for section 10 lecture 113 because it would not 
+  # let me created a new blog without adding a topic to it
+  belongs_to :topic, optional: true
 end

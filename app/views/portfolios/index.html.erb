@@ -2,11 +2,9 @@
 
 <%= link_to "Create New Item", new_portfolio_path %>
 
-<% @portfolio_items.each do |portfolio_item| %>
-  <p><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></p>
-  <p><%= portfolio_item.subtitle %></p>
-  <p><%= portfolio_item.body %></p>
-  <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?%>
-  <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
-  <%= link_to "Delete Portfolio Item", portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+<!-- The following is a MANUAL PARTIAL COLLECTION -->
+<!-- We manually decalred it is a partial and passing in -->
+<!-- the exact name of the partial "portfolio_item" -->
+<!-- The "collection" is telling rails that we are passing  -->
+<!-- the instance variable @portfolio_items as the collection of data -->
+<%= render partial: 'portfolio_item', collection: @portfolio_items %>

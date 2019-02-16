@@ -12,16 +12,12 @@
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <!-- What the following is doing: -->
+    <!-- Rails is looking for a partial called "blog" -->
+    <!-- It will then pass in the instance variable @blogs -->
+    <!-- Which in other words, passes the collection of blogs -->
+    <!-- to the partial "blog" -->
+    <%= render @blogs %>
   </tbody>
 </table>
 

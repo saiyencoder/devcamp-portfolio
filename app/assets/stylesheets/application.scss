@@ -3,8 +3,4 @@
 The following code will run all the files in stylesheets 
 require_tree .
 */
-
-/* Style all the classes named "top" and is a link(a)*/
-.top a {
-  color: brown;
-}
+@import "bootstrap";

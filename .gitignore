@@ -13,6 +13,9 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore notes made on project
+/notes/*
+
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep

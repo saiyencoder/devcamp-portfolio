@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/saiyencoder/barneys_view_tool
+  revision: 0666c0441d2843ff0b53b74ff82c8e8faf0be654
+  specs:
+    barneys_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -195,6 +201,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  barneys_view_tool!
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.3.1)
   byebug

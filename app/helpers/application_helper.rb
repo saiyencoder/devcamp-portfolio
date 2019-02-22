@@ -26,6 +26,11 @@ module ApplicationHelper
     end
   end
 
+  # This is calling the module in the ruby gem we created
+  def copyright_generator
+    # Module::Class.method arguments
+    BarneysViewTool::Renderer.copyright 'Barney Stinson', 'Challenge Accepted!'
+  end
 
 end
 

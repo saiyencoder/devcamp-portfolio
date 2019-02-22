@@ -51,3 +51,4 @@ gem 'devise', '~> 4.5'
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'barneys_view_tool', git: 'https://github.com/saiyencoder/barneys_view_tool'

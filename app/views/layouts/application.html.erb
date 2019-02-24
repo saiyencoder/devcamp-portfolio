@@ -15,18 +15,21 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          
+          <%= render "shared/application_nav" %>
 
-    <!-- location is a local variable that we are passing in -->
-    <%= render "shared/nav", location: "top" %>
+          <%= login_helper %>
 
-    <%= login_helper %>
+          <%= yield %>
 
-    <%= yield %>
+          <%= copyright_generator %>
 
-    <%= copyright_generator %>
-
-    <%= source_helper %>
+          <%= source_helper %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

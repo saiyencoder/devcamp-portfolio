@@ -9,7 +9,10 @@ module ApplicationHelper
   #   content_tag(:p, "My helper", class: "I am the superior class")
   # end
 
-  def login_helper style
+  # Login helper requires an argument passed in.
+  # by having " = '' " we set the default to be an empty string.
+  # If a class is passed in, the argument will take effect
+  def login_helper style = ''
     if current_user.is_a?(GuestUser) 
       (link_to "Register", new_user_registration_path, class: style) +
       " ".html_safe +

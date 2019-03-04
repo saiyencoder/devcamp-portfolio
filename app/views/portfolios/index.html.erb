@@ -1,10 +1,12 @@
-<h1>Portfolio Items</h1>
-
-<%= link_to "Create New Item", new_portfolio_path if logged_in?(:site_admin)%>
-
-<!-- The following is a MANUAL PARTIAL COLLECTION -->
-<!-- We manually decalred it is a partial and passing in -->
-<!-- the exact name of the partial "portfolio_item" -->
-<!-- The "collection" is telling rails that we are passing  -->
-<!-- the instance variable @portfolio_items as the collection of data -->
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <!-- The following is a MANUAL PARTIAL COLLECTION -->
+      <!-- We manually declared it as a partial and passing in -->
+      <!-- the exact name of the partial "portfolio_item" -->
+      <!-- The "collection" is telling rails that we are passing  -->
+      <!-- the instance variable @portfolio_items as the collection of data -->
+      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+    </div>
+  </div>
+</div>

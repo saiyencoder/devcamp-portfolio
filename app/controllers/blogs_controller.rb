@@ -1,9 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   # access all: [:show, :index] -> Everyone is able to see the index and show
-  # user: {except: [:destroy, :new, :create, :update, :edit]} -> A regular user will not be able to do all this
+  # user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]} -> A regular user will not be able to do all this
   # site_admin: :all -> Admin has access to everything
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
   # This tells the controller which layout out to choose
   # layout is the method and "blog" is the argument
   layout "blog"

@@ -1,15 +1,10 @@
 <div class="col-sm-8 blog-main">
-  
+  <%= paginate @blogs %><br>
   <!-- What the following is doing: -->
   <!-- Rails is looking for a partial called "blog" -->
   <!-- It will then pass in the instance variable @blogs -->
   <!-- Which in other words, passes the collection of blogs -->
   <!-- to the partial "blog" -->
   <%= render @blogs %>
-
-  <nav class="blog-pagination">
-    <a class="btn btn-outline-primary" href="#">Older</a>
-    <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-  </nav>
-
+  <%= paginate @blogs %>
 </div>

@@ -26,6 +26,12 @@ class Portfolio < ApplicationRecord
     self.thumb_image ||= Placeholder.image_generator(height: "350", width: "200")
   end
 
+  def self.by_position
+    # It will look for the position attribute, in the portfolio database
+    # table, and order the elements starting from the lowest to the highest
+    order("position ASC")
+  end
+
 end
 
 

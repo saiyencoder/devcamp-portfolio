@@ -7,6 +7,12 @@ class Portfolio < ApplicationRecord
   # Call Placeholder module from concerns folder
   include Placeholder
 
+  # PortfolioUploader is from the carrier gem for uploading images
+  # mount_uploader tells portfolio to call carrierwave, the uploader is going
+  # to apply to the :thumb_image and is going to use PortfolioUploader
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   has_many :technologies
 
   # Do not accept if name is blank

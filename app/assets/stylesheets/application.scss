@@ -34,10 +34,9 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 body {
-  color: #fff;
+  color: white;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
@@ -193,4 +192,23 @@ body {
 .app-nav span {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('barney_pub.jpg') no-repeat;
+  background-size: cover;
+}
+
+.app-footer {
+  color: white;
 }

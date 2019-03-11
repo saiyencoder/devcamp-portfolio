@@ -18,7 +18,8 @@ class Portfolio < ApplicationRecord
   has_many :technologies
 
   # Do not accept if name is blank
-  accepts_nested_attributes_for :technologies, 
+  accepts_nested_attributes_for :technologies,
+                                allow_destroy: true, 
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
   # When ruby_on_rails_portfolio_items is called, it will grab all the portfolio items

@@ -38,9 +38,11 @@
     <h2>Technologies Used:</h2>
     <div>
       <%= form.fields_for :technologies do |technology_form|%>
-        <div class="form-group">
-          <%= technology_form.label :name %>
-          <%= technology_form.text_field :name, class: 'form-control' %>
+      <!-- 'f' is the local variable we passed in to the partial -->
+        <%= render 'technology_fields', f: technology_form %>
+
+        <div>
+          <%= link_to_add_association 'Add Technology', f, :technologies %>
         </div>
       <% end %>
     </div>

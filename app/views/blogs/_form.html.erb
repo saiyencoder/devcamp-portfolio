@@ -12,17 +12,41 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: 'form-control' %>
+    <%# form.label :title %>
+    <%= form.text_field :title, class: 'form-control', placeholder: 'Title' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :body %>
+    <%# form.label :body %>
     <!-- The "rows: 15", is used for the height of the description box -->
-    <%= form.text_area :body, class: 'form-control', rows: 15 %>
+    <%= form.text_area :body, class: 'form-control', rows: 15, placeholder: 'Content' %>
   </div>
 
   <div class="form-group">
     <%= form.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
+
+<!-- ############################################################# -->
+<!-- 
+  Using form_tag to build form:
+  <%# form_tag(blogs_path) do %>
+    <div class="form-group">
+      <%# label_tag 'blog[title]' %>
+      <%# text_field_tag 'blog[title]', nil, class: 'form-control' %>
+      <%# text_field_tag 'blog[title]', blog.title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%# label_tag 'blog[body]' %>
+      <%# text_area_tag 'blog[body]', blog.body, class: 'form-control', rows: 15 %>
+    </div>
+    <div class="form-group">
+      <%# submit_tag 'Save', class: "btn btn-primary" %>
+    </div>
+  <%# end %>
+
+  form_tags are better used for search engines not as much for CRUD apps
+ -->
+
+<!-- ############################################################# -->
+

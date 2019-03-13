@@ -1,7 +1,0 @@
-<% if flash[:alert] %>
-  <%= js add_gritter(flash[:alert], title: "Barney's Box", sticky: false ) %>
-<% elsif flash[:error] %>
-  <%= js add_gritter(flash[:error], title: "Barney's Box", sticky: false ) %>
-<% else %>
-  <%= js add_gritter(flash[:notice], title: "Barney's Box", sticky: false ) %>
-<% end %>
